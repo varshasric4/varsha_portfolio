@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Achievements and Training</title>
+    <title>Achievements and Trainings</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -27,7 +27,7 @@
         .container {
             display: flex;
             justify-content: space-between;
-            flex-wrap: wrap;
+            flex-wrap: nowrap; /* Ensure the columns don't wrap */
             width: 90%;
             max-width: 1000px;
             margin: 20px auto;
@@ -42,7 +42,7 @@
             padding: 15px;
             background: linear-gradient(145deg, #e0ebff, #bfd6ff);
             border-radius: 10px;
-            margin: 10px 0;
+            margin: 0;
         }
         .section h2 {
             text-align: center;
@@ -69,9 +69,12 @@
         }
         /* Responsive adjustments */
         @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack the sections on smaller screens */
+            }
             .section {
                 width: 100%; /* Full width on smaller screens */
-                margin: 10px 0;
+                margin-bottom: 20px;
             }
             h1 {
                 font-size: 1.5em;
