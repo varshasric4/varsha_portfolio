@@ -31,16 +31,6 @@
             width: 100%;
             max-width: 1200px; /* Optional: Adjust based on your layout */
         }
-        
-        .header img {
-            width: 200px; /* Adjust width as needed */
-            height: auto; /* Maintain aspect ratio */
-            object-fit: contain; /* Ensure the entire image fits within the specified dimensions */
-            margin-right: 20px; /* Space between image and text */
-            max-height: 100%; /* Ensure the image does not exceed the height of its container */
-        }
-
-        
         .header .text {
             max-width: 600px; /* Limit text width */
             display: flex;
@@ -58,7 +48,10 @@
             margin-bottom: 30px;
             text-align: left; /* Align text to the left */
         }
-        
+        .home-img
+        {
+            width: 35vw;
+        }
         .buttons {
             font-family: 'Poppins', sans-serif;
             display: flex;
@@ -100,8 +93,10 @@
     </style>
 </head>
 <body>
+    <div class='home-img'>
+         <img src="varsha_photo.jpg" alt="Varsha's Picture">
+    </div>
     <div class="header">
-        <img src="varsha_photo.jpg" alt="Varsha's Picture">
         <h1>Varsha Sri Palakurthi</h1>
         <p class="description">
             I’m a student with a passion for software engineering and data science. My dream job is to
