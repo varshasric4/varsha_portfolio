@@ -19,7 +19,7 @@
         }
         h1 {
             color: #001f3f;
-            font-size: 1.5em;
+            font-size: 1.3em; /* Reduced the font size */
             margin-top: 30px;
             margin-bottom: 20px;
             text-align: center;
@@ -28,35 +28,43 @@
             display: flex;
             justify-content: space-between;
             width: 80%;
-            max-width: 800px; /* Reduced the size of the container */
+            max-width: 800px;
             margin: 20px auto;
             padding: 20px;
             background-color: #ffffff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 15px;
             box-sizing: border-box;
+            transition: transform 0.3s ease-in-out; /* Hover transition effect */
+        }
+        .container:hover {
+            transform: scale(1.02); /* Slight scale-up on hover */
         }
         .section {
-            width: 45%; /* Reduced the section size to create more space */
-            padding: 20px;
+            width: 45%;
+            padding: 15px; /* Reduced padding */
             background: linear-gradient(145deg, #e0ebff, #bfd6ff);
             border-radius: 15px;
+            transition: background 0.3s ease-in-out;
+        }
+        .section:hover {
+            background: linear-gradient(145deg, #d3e0ff, #a6c7ff); /* Color change on hover */
         }
         .split {
             width: 2px;
-            background-color: #007bff; /* Split line between sections */
+            background-color: #007bff;
             margin: 0 10px;
         }
         .section h2 {
             text-align: center;
-            font-size: 1.2em;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
+            font-size: 1.1em; /* Reduced the font size */
+            margin-bottom: 15px;
+            padding-bottom: 8px;
             border-bottom: 2px solid #007bff;
         }
         .achievement, .training {
-            margin-bottom: 10px;
-            font-size: 0.9em;
+            margin-bottom: 8px;
+            font-size: 0.8em; /* Reduced the font size */
         }
         .achievement a, .training a {
             color: #0056b3;
@@ -71,14 +79,14 @@
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
-                align-items: center; /* Center the columns in mobile view */
+                align-items: center;
             }
             .section {
                 width: 100%;
                 margin-bottom: 20px;
             }
             h1 {
-                font-size: 1.4em;
+                font-size: 1.2em; /* Reduced font size for mobile */
             }
             .section h2 {
                 font-size: 1em;
