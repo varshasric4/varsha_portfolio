@@ -27,9 +27,8 @@
         .container {
             display: flex;
             justify-content: space-between;
-            flex-wrap: nowrap; 
-            width: 90%;
-            max-width: 1000px;
+            width: 80%;
+            max-width: 800px; /* Reduced the size of the container */
             margin: 20px auto;
             padding: 20px;
             background-color: #ffffff;
@@ -38,11 +37,15 @@
             box-sizing: border-box;
         }
         .section {
-            width: 48%; 
+            width: 45%; /* Reduced the section size to create more space */
             padding: 20px;
             background: linear-gradient(145deg, #e0ebff, #bfd6ff);
             border-radius: 15px;
-            margin: 0;
+        }
+        .split {
+            width: 2px;
+            background-color: #007bff; /* Split line between sections */
+            margin: 0 10px;
         }
         .section h2 {
             text-align: center;
@@ -53,9 +56,6 @@
         }
         .achievement, .training {
             margin-bottom: 10px;
-            font-size: 0.7em;
-        }
-        .achievement:hover, .training:hover {
             font-size: 0.9em;
         }
         .achievement a, .training a {
@@ -70,10 +70,11 @@
        
         @media (max-width: 768px) {
             .container {
-                flex-direction: column; 
+                flex-direction: column;
+                align-items: center; /* Center the columns in mobile view */
             }
             .section {
-                width: 100%; 
+                width: 100%;
                 margin-bottom: 20px;
             }
             h1 {
@@ -119,6 +120,9 @@
                 • <a href="Intro_Entity_relational.pdf" class="btn" target="_blank">Entity Relationship ER Modelling</a>
             </div>
         </div>
+
+        <div class="split"></div> <!-- Added split line -->
+
         <div class="section">
             <h2>Trainings</h2>
             <div class="training">
