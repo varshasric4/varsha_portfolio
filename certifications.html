@@ -26,6 +26,7 @@
         }
         .container {
             display: flex;
+            justify-content: space-between;
             flex-wrap: wrap;
             width: 90%;
             max-width: 1000px;
@@ -37,11 +38,11 @@
             box-sizing: border-box;
         }
         .section {
-            flex: 1 1 45%;
+            width: 48%; /* Set to 48% for two columns with space between them */
             padding: 15px;
             background: linear-gradient(145deg, #e0ebff, #bfd6ff);
             border-radius: 10px;
-            margin: 10px;
+            margin: 10px 0;
         }
         .section h2 {
             text-align: center;
@@ -69,7 +70,7 @@
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .section {
-                flex: 1 1 100%;
+                width: 100%; /* Full width on smaller screens */
                 margin: 10px 0;
             }
             h1 {
@@ -84,6 +85,7 @@
 <body>
     <h1>Achievements and Trainings</h1>
     <div class="container">
+        <!-- Left side: Certifications -->
         <div class="section">
             <h2>Certifications</h2>
             <div class="achievement">
@@ -114,6 +116,8 @@
                 • <a href="Intro_Entity_relational.pdf" class="btn" target="_blank">Entity Relationship ER Modelling</a>
             </div>
         </div>
+        
+        <!-- Right side: Trainings -->
         <div class="section">
             <h2>Trainings</h2>
             <div class="training">
