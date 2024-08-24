@@ -17,62 +17,60 @@
         }
         h1 {
             color: #2e21c5;
-            font-size: 2.5em;
-            margin-top: 40px;
+            font-size: 2em;
+            margin-top: 20px;
             margin-bottom: 20px;
         }
         .container {
-            width: 70%;
-            max-width: 1200px;
+            width: 90%;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 20px 10px;
             display: flex;
+            justify-content: space-between;
+            gap: 20px;
             flex-wrap: wrap;
-            gap: 30px;
-            justify-content: center;
         }
         .project {
             background: #b1c6e8;
-            border-radius: 12px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 550px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 48%; /* Reduced size to fit two boxes in one row */
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .project:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
         .project img {
             width: 100%;
-            height: 250px;
+            height: 180px; /* Reduced height */
             object-fit: cover;
         }
         .project-details {
-            padding: 25px;
+            padding: 15px;
             background-color: #e6f0ff;
         }
         .project-title {
-            font-size: 1.8em;
-            margin-bottom: 15px;
+            font-size: 1.5em;
+            margin-bottom: 10px;
             color: #007bff;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
         .project-description {
-            font-size: 1.3em;
+            font-size: 1.1em;
             color: #1f0303;
-            line-height: 1.8;
-            margin-bottom: 20px;
+            line-height: 1.5;
+            margin-bottom: 15px;
         }
         .project a {
             display: inline-block;
-            padding: 15px 25px;
-            font-size: 1.1em;
+            padding: 10px 20px;
+            font-size: 1em;
             color: #ffffff;
             background-color: #0b21e4;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 5px;
             transition: background-color 0.3s ease, transform 0.2s ease;
         }
         .project a:hover {
@@ -94,14 +92,11 @@
         <div class="project">
             <div class="project-details">
                 <h2 class="project-title">RailwayReservationSystem</h2>
-                <p class="project-description">A Railway Booking Platform implemented in C programming language. Allows users to sign up, login, book and
-                     cancel tickets, provide feedback, and rate their experience.Allows users to sign up and log in with a username and password.
-
-                    </p>
+                <p class="project-description">A Railway Booking Platform implemented in C programming language. Allows users to sign up, login, book and cancel tickets, provide feedback, and rate their experience. Allows users to sign up and log in with a username and password.</p>
                 <a href="https://github.com/varshasric4/Railway_reservation" target="_blank">View on GitHub</a>
             </div>
         </div>
-        
     </div>
 </body>
 </html>
+
