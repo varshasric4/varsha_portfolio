@@ -19,7 +19,7 @@
         }
         h1 {
             color: #001f3f;
-            font-size: 1.8em;
+            font-size: 1.5em;
             margin-top: 30px;
             margin-bottom: 20px;
             text-align: center;
@@ -27,7 +27,7 @@
         .container {
             display: flex;
             justify-content: space-between;
-            flex-wrap: nowrap; /* Ensure the columns don't wrap */
+            flex-wrap: nowrap; 
             width: 90%;
             max-width: 1000px;
             margin: 20px auto;
@@ -38,7 +38,7 @@
             box-sizing: border-box;
         }
         .section {
-            width: 48%; /* Set to 48% for two columns with space between them */
+            width: 48%; 
             padding: 15px;
             background: linear-gradient(145deg, #e0ebff, #bfd6ff);
             border-radius: 10px;
@@ -46,17 +46,17 @@
         }
         .section h2 {
             text-align: center;
-            font-size: 1.4em;
+            font-size: 1.2em;
             margin-bottom: 20px;
             padding-bottom: 8px;
             border-bottom: 2px solid #007bff;
         }
         .achievement, .training {
             margin-bottom: 10px;
-            font-size: 0.9em;
+            font-size: 0.7em;
         }
         .achievement:hover, .training:hover {
-            font-size: 1em;
+            font-size: 0.9em;
         }
         .achievement a, .training a {
             color: #0056b3;
@@ -67,20 +67,20 @@
         .achievement a:hover, .training a:hover {
             color: #003d80;
         }
-        /* Responsive adjustments */
+       
         @media (max-width: 768px) {
             .container {
-                flex-direction: column; /* Stack the sections on smaller screens */
+                flex-direction: column; 
             }
             .section {
-                width: 100%; /* Full width on smaller screens */
+                width: 100%; 
                 margin-bottom: 20px;
             }
             h1 {
-                font-size: 1.5em;
+                font-size: 1.4em;
             }
             .section h2 {
-                font-size: 1.2em;
+                font-size: 1em;
             }
         }
     </style>
@@ -88,7 +88,7 @@
 <body>
     <h1>Achievements and Trainings</h1>
     <div class="container">
-        <!-- Left side: Certifications -->
+        
         <div class="section">
             <h2>Certifications</h2>
             <div class="achievement">
@@ -119,8 +119,6 @@
                 • <a href="Intro_Entity_relational.pdf" class="btn" target="_blank">Entity Relationship ER Modelling</a>
             </div>
         </div>
-        
-        <!-- Right side: Trainings -->
         <div class="section">
             <h2>Trainings</h2>
             <div class="training">
