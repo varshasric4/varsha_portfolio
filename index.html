@@ -27,8 +27,8 @@
             color: #001f3f; 
             margin-bottom: 40px;
             display: flex;
-            flex-direction: column;
-            align-items: center; /* Center the content horizontally */
+            align-items: center;
+            justify-content: flex-start;
             width: 100%;
             max-width: 1200px;
             margin-top: 40px; /* Add space at the top */
@@ -39,22 +39,24 @@
             width: 200px;
             height: 300px;
             object-fit: cover;
-            margin-bottom: 20px; /* Add space below the image */
+            margin-right: 20px;
+        }
+        
+        .header .text {
+            max-width: 600px; 
         }
         
         h1 {
             text-align: center;
             font-size: 36px;
-            margin: 10px 0; /* Adjust the spacing around the name */
+            margin: 0; 
         }
         
         .description {
             font-family: Georgia, serif;
             font-size: 18px;
             margin-bottom: 30px;
-            text-align: justify; /* Justify the description text */
-            text-align-last: center; /* Center the last line */
-            max-width: 800px; /* Add a max-width for better readability */
+            text-align: center; 
         }
         
         .buttons {
@@ -100,12 +102,14 @@
 <body>
     <div class="header">
         <img src="var_photo.jpg" alt="Varsha's Picture">
-        <h1>Varsha Sri Palakurthi</h1>
-        <p class="description">
-            I’m a student with a passion for software engineering and data science. My dream job is to
-            blend these interests to develop innovative solutions and analyze data for impactful insights.
-            I’m excited about leveraging technology to solve real-world problems and drive advancements in both fields.
-        </p>
+        <div class="text">
+            <h1>Varsha Sri Palakurthi</h1>
+            <p class="description">
+                I’m a student with a passion for software engineering and data science. My dream job is to
+                blend these interests to develop innovative solutions and analyze data for impactful insights.
+                I’m excited about leveraging technology to solve real-world problems and drive advancements in both fields.
+            </p>
+        </div>
     </div>
 
     <div class="buttons">
