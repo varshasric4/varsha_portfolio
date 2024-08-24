@@ -27,22 +27,25 @@
             color: #001f3f; /* or #333333 */
             margin-bottom: 40px;
             display: flex;
-            align-items: center;
-            justify-content: flex-start; /* Align items to the start of the flex container */
+            align-items: flex-start; /* Align items to the start of the flex container */
+            justify-content: flex-start;
             width: 100%;
             max-width: 1200px; /* Optional: Adjust based on your layout */
         }
         
         .header img {
             border-radius: 10px; /* Rounded corners for a rectangle shape */
-            width: 200px;
+            width: 200px; /* Adjusted width */
             height: 650px; /* Adjusted height for rectangular shape */
-            object-fit: cover;
+            object-fit: cover; /* Ensures the image covers the dimensions without distortion */
             margin-right: 20px; /* Space between image and text */
         }
         
         .header .text {
             max-width: 600px; /* Limit text width */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         
         h1 {
