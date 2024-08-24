@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #9cb8e2;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #2e21c5;
+            font-size: 2.7em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        .project {
+            background: #b1c6e8;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 550px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .project img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .project-details {
+            padding: 25px;
+            background-color: #e6f0ff;
+        }
+        .project-title {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #007bff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        .project-description {
+            font-size: 1.3em;
+            color: #1f0303;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .project a {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 1.1em;
+            color: #ffffff;
+            background-color: #0b21e4;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .project a:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>Projects</h1>
+    <div class="container">
+        <div class="project">
+            <div class="project-details">
+                <h2 class="project-title">Knowledgeable Knight</h2>
+                <p class="project-description">Developing a program that, given a starting point on a N x N chessboard, generates a Knight's Tour—a sequence of moves covering each square exactly once. The program also displays the tour's sequence and indicates if it's open or closed.</p>
+                <a href="https://github.com/varshasric4/Knowledgable_knights" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+        <div class="project">
+            <div class="project-details">
+                <h2 class="project-title">RailwayReservationSystem</h2>
+                <p class="project-description">A Railway Booking Platform implemented in C programming language. Allows users to sign up, login, book and
+                     cancel tickets, provide feedback, and rate their experience.Allows users to sign up and log in with a username and password.
+
+                    </p>
+                <a href="https://github.com/varshasric4/Railway_reservation" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
