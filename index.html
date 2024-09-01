@@ -9,122 +9,120 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+        }
+        :root {
+            --bg-color: #1f242d;
+            --second-bg-color: #323946;
+            --text-color: #fff;
+            --main-color: #0ef;
         }
 
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             background: linear-gradient(135deg, #d0e7ff, #b0d4ff);
             color: #333;
-            padding: 0 20px;
+            min-height: 100vh;
+        }
+        section {
+            min-height: 100vh;
+            padding: 10rem 9% 2rem;
         }
 
+        /* Header Styles */
         .header {
-            font-family: 'Playfair Display', serif;
-            color: #001f3f; 
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            max-width: 1200px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        .header img {
-            border-radius: 10px; 
-            width: 200px;
-            height: 300px;
-            object-fit: cover;
-            margin-right: 20px;
-        }
-
-        .header .text {
+            padding: 2rem 9%;
+            background: var(--bg-color);
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            max-width: 600px;
+            justify-content: space-between;
+            z-index: 100;
         }
 
-        .header h3, .header h1 {
-            margin: 0;
-            padding: 0;
+        .header.sticky {
+            border-bottom: .1rem solid rgba(0,0,0,.2);
         }
 
-        .header h1 {
-            font-size: 36px;
-            color: #001f3f;
+        .logo {
+            font-size: 3rem;
+            color: var(--text-color);
+            font-weight: 600;
+            cursor: default;
+        }
+        .navbar a {
+            font-size: 1.7rem;
+            color: var(--text-color);
+            margin-left: 4rem;
+            transition: .3s;
         }
 
-        .header h3 {
-            font-size: 24px;
-            color: #003366;
+        .navbar a:hover,
+        .navbar a.active {
+            color: var(--main-color);
         }
 
-        .header .description {
-            font-family: Georgia, serif;
-            font-size: 18px;
-            text-align: left;
-            margin: 20px 0;
-            max-width: 600px;
-            opacity: 0; /* Hidden initially */
-            transform: translateY(50px); /* Slightly off-screen initially */
-            transition: all 0.8s ease-out; /* Animation duration and easing */
+        /* Main Content Styles */
+        .content {
+            padding: 40px;
+            display: flex;
+            align-items: center;
         }
 
-        .header .description.visible {
-            opacity: 1; /* Fully visible */
-            transform: translateY(0); /* Reset transform */
+        .text {
+            max-width: 60%;
         }
 
-        .social-icons {
-            margin-top: 10px;
+        .text h3 {
+            font-size: 55px;
         }
 
-        .social-icons a {
-            margin: 0 10px;
-            display: inline-block;
-        }
-
-        .social-icons img {
-            width: 24px;
-            height: 24px;
-        }
-
-        .projects, .hobbies {
-            margin-top: 40px;
-            max-width: 600px;
-            text-align: left;
-            opacity: 0; /* Hidden initially */
-            transform: translateY(50px); /* Slightly off-screen initially */
-            transition: all 0.8s ease-out; /* Animation duration and easing */
-        }
-
-        .projects.visible, .hobbies.visible {
-            opacity: 1; /* Fully visible */
-            transform: translateY(0); /* Reset transform */
-        }
-
-        .projects h2, .hobbies h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 28px;
-            color: #001f3f;
+        .text h1 {
+            font-size: 48px;
             margin-bottom: 20px;
         }
 
-        .projects ul, .hobbies ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
-
-        .projects li, .hobbies li {
-            font-family: Georgia, serif;
-            font-size: 18px;
+        .description p {
+            font-size: 45px;
+            line-height: 1.6;
             margin-bottom: 10px;
         }
 
+        .social-icons img {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .home-img img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .home-img {
+            width: 35%;
+            margin-left: 20px;
+        }
+        .project {
+            font-size: 45px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+        }
+        .hobbies {
+            font-size: 45px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
         .buttons {
             font-family: 'Poppins', sans-serif;
             display: flex;
@@ -139,7 +137,7 @@
             color: #ffffff;
             padding: 10px 20px;
             border: none;
-            border-radius: 5px;
+            border-radius: 15px;
             text-decoration: none;
             font-family: 'Montserrat', sans-serif;
         }
@@ -148,27 +146,20 @@
             background-color: #002d72;
             transform: scale(1.05);
         }
-
-        .footer {
-            margin-top: 40px;
-            text-align: center;
-            font-size: 14px;
-        }
-
-        .footer a {
-            color: #333;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
-    <div class="header">
-        <img src="Varsha_photo.jpg" alt="Varsha's Picture">
+    <header class="header">
+        <div class="logo">Portfolio</div>
+        <nav class="navbar">
+            <a href="#home">About</a>
+            <a href="#project">Projects</a>
+            <a href="#hobbies">Hobbies</a>
+        </nav>
+    </header>
+
+    <!-- Added id="home" to the About section -->
+    <section id="home" class="content">
         <div class="text">
             <h3>Hello, It's Me</h3>
             <h1>Varsha Sri Palakurthi</h1>
@@ -181,33 +172,40 @@
                 <p>• My dream job is to blend these interests to develop innovative solutions and analyze data for impactful insights.</p>
                 <p>• I’m excited about leveraging technology to solve real-world problems and drive advancements in both fields.</p>
             </div>
+            <div class="buttons">
+                <a href="varsha_resume.pdf" class="button">Resume</a>
+                <a href="project.html" class="button">Projects</a>
+                <a href="certifications.html" class="button">Certifications</a>
+            </div>
+        
         </div>
-    </div>
+        <div class="home-img">
+            <img src="Varsha_photo.jpg" alt="Varsha's Picture">
+        </div>
+    </section>
 
-    <div class="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>Knowledgeable Knights</li>
-            <li>Image-Based Fruits and Vegetables Recognition and Calorie Counter</li>
-            <li>Dallas Crime Rates Visualization</li>
-            <li>Railway Reservation System</li>
-        </ul>
-    </div>
+    <section id="project" class="project">
+        <div class="text">
+            <h3>Projects</h3>
+            <div class="description">
+                <li>Knowledgeable Knights</li>
+                <li>Image-Based Fruits and Vegetables Recognition and Calorie Counter</li>
+                <li>Dallas Crime Rates Visualization</li>
+                <li>Railway Reservation System</li>
+            </div>
+        </div>
+    </section>
 
-    <div class="hobbies">
-        <h2>Hobbies</h2>
-        <ul>
-            <li>Enjoy solving puzzles like Sudoku and Rubik's Cube.</li>
-            <li>Watching movies.</li>
-        </ul>
-    </div>
-
-    <div class="buttons">
-        <a href="varsha_resume.pdf" class="button">Resume</a>
-        <a href="project.html" class="button">project.html</a>
-        <a href="certifications.html" class="button">Certifications</a>
-    </div>
-
+    <!-- Corrected the spelling of section -->
+    <section id="hobbies" class="hobbies">
+        <div class="text">
+            <h3>Hobbies</h3>
+            <div class="description">
+                <li>Enjoy solving puzzles like Sudoku and Rubik's Cube.</li>
+                <li>Watching movies.</li>
+            </div>
+        </div>
+    </section>
     <div class="footer">
         <p><a href="mailto:varulucky1004@gmail.com">varulucky1004@gmail.com</a> | <a href="https://github.com/varshasric4">GitHub</a></p>
     </div>
@@ -233,5 +231,7 @@
         // Call reveal function on page load
         document.addEventListener('DOMContentLoaded', reveal);
     </script>
+</body>
+</html>
 </body>
 </html>
