@@ -25,13 +25,12 @@
             font-family: 'Playfair Display', serif;
             color: #001f3f; 
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            align-items: flex-start;
+            justify-content: flex-start;
             width: 100%;
             max-width: 1200px;
             margin-top: 20px;
-            text-align: center;
+            margin-bottom: 20px;
         }
 
         .header img {
@@ -39,7 +38,14 @@
             width: 200px;
             height: 300px;
             object-fit: cover;
-            margin-bottom: 20px;
+            margin-right: 20px;
+        }
+
+        .header .text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 600px;
         }
 
         .header h3, .header h1 {
@@ -61,8 +67,8 @@
             font-family: Georgia, serif;
             font-size: 18px;
             text-align: left;
-            margin: 20px auto;
-            max-width: 800px;
+            margin: 20px 0;
+            max-width: 600px;
             opacity: 0; /* Hidden initially */
             transform: translateY(50px); /* Slightly off-screen initially */
             transition: all 0.8s ease-out; /* Animation duration and easing */
@@ -74,7 +80,7 @@
         }
 
         .social-icons {
-            margin-top: 20px;
+            margin-top: 10px;
         }
 
         .social-icons a {
@@ -89,7 +95,7 @@
 
         .projects, .hobbies {
             margin-top: 40px;
-            max-width: 800px;
+            max-width: 600px;
             text-align: left;
             opacity: 0; /* Hidden initially */
             transform: translateY(50px); /* Slightly off-screen initially */
@@ -163,16 +169,18 @@
 <body>
     <div class="header">
         <img src="Varsha_photo.jpg" alt="Varsha's Picture">
-        <h3>Hello, It's Me</h3>
-        <h1>Varsha Sri Palakurthi</h1>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/yourprofile"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-            <a href="https://github.com/yourprofile"><img src="github-icon.png" alt="GitHub"></a>
-        </div>
-        <div class="description">
-            <p>• I’m a student with a passion for software engineering and data science.</p>
-            <p>• My dream job is to blend these interests to develop innovative solutions and analyze data for impactful insights.</p>
-            <p>• I’m excited about leveraging technology to solve real-world problems and drive advancements in both fields.</p>
+        <div class="text">
+            <h3>Hello, It's Me</h3>
+            <h1>Varsha Sri Palakurthi</h1>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/yourprofile"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                <a href="https://github.com/yourprofile"><img src="github-icon.png" alt="GitHub"></a>
+            </div>
+            <div class="description">
+                <p>• I’m a student with a passion for software engineering and data science.</p>
+                <p>• My dream job is to blend these interests to develop innovative solutions and analyze data for impactful insights.</p>
+                <p>• I’m excited about leveraging technology to solve real-world problems and drive advancements in both fields.</p>
+            </div>
         </div>
     </div>
 
@@ -221,7 +229,9 @@
 
         // Event listener for scroll event
         window.addEventListener('scroll', reveal);
+
+        // Call reveal function on page load
+        document.addEventListener('DOMContentLoaded', reveal);
     </script>
 </body>
 </html>
-
