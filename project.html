@@ -3,117 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects</title>
+    <title>Varsha's Portfolio</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #d0e7ff, #b0d4ff);
-            color: #333;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
+            background: linear-gradient(135deg, #d0e7ff, #b0d4ff);
+            color: #333;
+            padding: 0 20px;
         }
-        h1 {
-            color: #091658;
-            font-size: 1.5em; 
+
+        .header {
+            font-family: 'Playfair Display', serif;
+            color: #001f3f; 
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            width: 100%;
+            max-width: 1200px;
             margin-top: 20px;
+        }
+
+        .header img {
+            border-radius: 10px; 
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .header .text {
+            max-width: 600px; 
+        }
+
+        .header h3, .header h1 {
+            text-align: left;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: #001f3f;
+        }
+
+        .header h3 {
+            font-size: 24px;
+            color: #003366;
+        }
+
+        .header .description {
+            font-family: Georgia, serif;
+            font-size: 18px;
+            text-align: left;
+            margin: 20px 0;
+            max-width: 800px;
+            opacity: 0; /* Hidden initially */
+            transform: translateY(50px); /* Slightly off-screen initially */
+            transition: all 0.8s ease-out; /* Animation duration and easing */
+        }
+
+        .header .description.visible {
+            opacity: 1; /* Fully visible */
+            transform: translateY(0); /* Reset transform */
+        }
+
+        .projects, .hobbies {
+            margin-top: 40px;
+            max-width: 800px;
+            text-align: left;
+            opacity: 0; /* Hidden initially */
+            transform: translateY(50px); /* Slightly off-screen initially */
+            transition: all 0.8s ease-out; /* Animation duration and easing */
+        }
+
+        .projects.visible, .hobbies.visible {
+            opacity: 1; /* Fully visible */
+            transform: translateY(0); /* Reset transform */
+        }
+
+        .projects h2, .hobbies h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #001f3f;
             margin-bottom: 20px;
         }
-        .container {
-            width: 90%;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px 10px;
+
+        .projects ul, .hobbies ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .projects li, .hobbies li {
+            font-family: Georgia, serif;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .buttons {
+            font-family: 'Poppins', sans-serif;
             display: flex;
-            justify-content: space-between;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-        .project {
-            background: #b1c6e8;
-            border-radius: 8px; 
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 46%; /* Further reduced the size */
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .project:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-        .project img {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-        }
-        .project-details {
-            padding: 12px;
-            background-color: #e6f0ff;
-        }
-        .project-title {
-            font-size: 1.2em; 
-            margin-bottom: 8px;
-            color:#091658;
-            text-align:center;
-        }
-        .project-description {
-            font-size: 0.8em; 
-            color: #1f0303;
-            line-height: 1.4;
-            margin-bottom: 12px;
-        }
-        .project a {
-            display: inline-block;
-            padding: 8px 16px; 
-            font-size: 0.8em; 
-            color: #ffffff;
-            background-color: #0b21e4;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        .project a:hover {
-            background-color: #218838;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
             transform: scale(1.05);
+        }
+
+        .button {
+            background-color: #003366; 
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .button:hover {
+            background-color: #002d72;
+            transform: scale(1.05);
+        }
+
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h1>Projects</h1>
-    <div class="container">
-        <div class="project">
-            <div class="project-details">
-                <h2 class="project-title">Knowledgable Knights</h2>
-                <p class="project-description">Developing a program that, given a starting point on a N x N chessboard, generates a Knight's Tour—a sequence of moves covering each square exactly once. The program also displays the tour's sequence and indicates if it's open or closed.</p>
-                <a href="https://github.com/varshasric4/Knowledgable_knights" target="_blank">View on GitHub</a>
-            </div>
-        </div>
-        <div class="project">
-            <div class="project-details">
-                <h2 class="project-title">Machine Learning Image based Fruits and Vegetables Recognition with calories</h2>
-                <p class="project-description">Developed a lightweight deep learning model using a modified MobileNetV2 architecture with an attention module,
-achieving superior classification accuracy with fewer trainable parameters.</p>
-                <a href="https://github.com/varshasric4/Machine-Learning-Image-based-Fruits-and-Vegetables-Recognition-with-calories-" target="_blank">View on GitHub</a>
-            </div>
-        </div>
-        <div class="project">
-            <div class="project-details">
-                <h2 class="project-title">Dallas Crime Rate Visualization through Tableau.</h2>
-                <p class="project-description">Analyzes Dallas crime rates using interactive dashboards to uncover patterns and trends, providing insights into
-time, location, and crime types using Tableau.</p>
-            </div>
-        </div>
-        
-        <div class="project">
-            <div class="project-details">
-                <h2 class="project-title">Railway Reservation System</h2>
-                <p class="project-description">A Railway Booking Platform implemented in C programming language. Allows users to sign up, login, book and cancel tickets, provide feedback, and rate their experience.
-                    Allows users to sign up and log in with a username and password.This is the basic implementation and overview.</p>
-                <a href="https://github.com/varshasric4/Railway_reservation" target="_blank">View on GitHub</a>
+    <div class="header">
+        <img src="Varsha_photo.jpg" alt="Varsha's Picture">
+        <div class="text">
+            <h3>Hello, It's Me</h3>
+            <h1>Varsha Sri Palakurthi</h1>
+            <div class="description">
+                <p>• I’m a student with a passion for software engineering and data science.</p>
+                <p>• My dream job is to blend these interests to develop innovative solutions and analyze data for impactful insights.</p>
+                <p>• I’m excited about leveraging technology to solve real-world problems and drive advancements in both fields.</p>
             </div>
         </div>
     </div>
+
+    <div class="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>Knowledgeable Knights</li>
+            <li>Image-Based Fruits and Vegetables Recognition and Calorie Counter</li>
+            <li>Dallas Crime Rates Visualization</li>
+            <li>Railway Reservation System</li>
+        </ul>
+    </div>
+
+    <div class="hobbies">
+        <h2>Hobbies</h2>
+        <ul>
+            <li>Enjoy solving puzzles like Sudoku and Rubik's Cube.</li>
+            <li>Watching movies.</li>
+        </ul>
+    </div>
+
+    <div class="buttons">
+        <a href="varsha_resume.pdf" class="button">Resume</a>
+        <a href="project.html" class="button">Projects</a>
+        <a href="certifications.html" class="button">Certifications</a>
+    </div>
+
+    <div class="footer">
+        <p><a href="mailto:varulucky1004@gmail.com">varulucky1004@gmail.com</a> | <a href="https://github.com/varshasric4">GitHub</a></p>
+    </div>
+
+    <script>
+        // Function to add the visible class when sections are in view
+        function reveal() {
+            var reveals = document.querySelectorAll('.projects, .hobbies, .description');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('visible');
+                }
+            }
+        }
+
+        // Event listener for scroll event
+        window.addEventListener('scroll', reveal);
+    </script>
 </body>
 </html>
