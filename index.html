@@ -70,7 +70,7 @@
         }
 
         /* Main Content Styles */
-        .content {
+        .content, .project, .hobbies {
             padding: 40px;
             display: flex;
             align-items: center;
@@ -89,7 +89,7 @@
             margin-bottom: 20px;
         }
 
-        .description p {
+        .description p, .description li {
             font-size: 45px;
             line-height: 1.6;
             margin-bottom: 10px;
@@ -109,19 +109,6 @@
         .home-img {
             width: 35%;
             margin-left: 20px;
-        }
-        .project {
-            font-size: 45px;
-            line-height: 1.6;
-            margin-bottom: 10px;
-            padding: 40px;
-            display: flex;
-            align-items: center;
-        }
-        .hobbies {
-            font-size: 45px;
-            line-height: 1.6;
-            margin-bottom: 10px;
         }
         .buttons {
             font-family: 'Poppins', sans-serif;
@@ -158,7 +145,6 @@
         </nav>
     </header>
 
-    <!-- Added id="home" to the About section -->
     <section id="home" class="content">
         <div class="text">
             <h3>Hello, It's Me</h3>
@@ -177,7 +163,6 @@
                 <a href="project.html" class="button">Projects</a>
                 <a href="certifications.html" class="button">Certifications</a>
             </div>
-        
         </div>
         <div class="home-img">
             <img src="Varsha_photo.jpg" alt="Varsha's Picture">
@@ -196,7 +181,6 @@
         </div>
     </section>
 
-    <!-- Corrected the spelling of section -->
     <section id="hobbies" class="hobbies">
         <div class="text">
             <h3>Hobbies</h3>
@@ -206,6 +190,7 @@
             </div>
         </div>
     </section>
+
     <div class="footer">
         <p><a href="mailto:varulucky1004@gmail.com">varulucky1004@gmail.com</a> | <a href="https://github.com/varshasric4">GitHub</a></p>
     </div>
@@ -231,7 +216,5 @@
         // Call reveal function on page load
         document.addEventListener('DOMContentLoaded', reveal);
     </script>
-</body>
-</html>
 </body>
 </html>
