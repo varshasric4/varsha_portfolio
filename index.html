@@ -68,10 +68,20 @@
             max-width: 800px;
         }
 
+        /* Initial state for animation */
         .projects, .hobbies {
             margin-top: 40px;
             max-width: 800px;
             text-align: left;
+            opacity: 0; /* Hidden initially */
+            transform: translateY(50px); /* Slightly off-screen initially */
+            transition: all 0.8s ease-out; /* Animation duration and easing */
+        }
+
+        /* Animation trigger when in view */
+        .projects.visible, .hobbies.visible {
+            opacity: 1; /* Fully visible */
+            transform: translateY(0); /* Reset transform */
         }
 
         .projects h2, .hobbies h2 {
@@ -174,5 +184,24 @@
     <div class="footer">
         <p><a href="mailto:varulucky1004@gmail.com">varulucky1004@gmail.com</a> | <a href="https://github.com/varshasric4">GitHub</a></p>
     </div>
+
+    <script>
+        // Function to add the visible class when sections are in view
+        function reveal() {
+            var reveals = document.querySelectorAll('.projects, .hobbies');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('visible');
+                }
+            }
+        }
+
+        // Event listener for scroll event
+        window.addEventListener('scroll', reveal);
+    </script>
 </body>
 </html>
