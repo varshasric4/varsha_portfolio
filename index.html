@@ -95,9 +95,20 @@
             margin-bottom: 10px;
         }
 
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
         .social-icons img {
             width: 40px;
-            margin-right: 10px;
+            transition: transform 0.3s, opacity 0.3s;
+            opacity: 0.8;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2) rotate(15deg); /* Scale and rotate on hover */
+            opacity: 1;
         }
 
         .home-img img {
@@ -133,6 +144,25 @@
             background-color: #002d72;
             transform: scale(1.05);
         }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--bg-color);
+            color: var(--text-color);
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -152,7 +182,7 @@
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/palakurthi-varsha-sri-091323259/"><img src="linkedin.png" alt="LinkedIn"></a>
                 <a href="https://github.com/varshasric4"><img src="github.png" alt="GitHub"></a>
-                <a href="22wh1a05c4@bvrithyderabad.edu.in"><img src="gmail.png" alt="Gmail"></a>
+                <a href="mailto:22wh1a05c4@bvrithyderabad.edu.in"><img src="gmail.png" alt="Gmail"></a>
             </div>
             <div class="description">
                 <p>• I’m a student with a passion for software engineering and data science.</p>
