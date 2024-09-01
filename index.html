@@ -74,6 +74,7 @@
             padding: 40px;
             display: flex;
             align-items: center;
+            justify-content: space-between;
         }
 
         .text {
@@ -110,6 +111,7 @@
             width: 35%;
             margin-left: 20px;
         }
+
         .project {
             font-size: 45px;
             line-height: 1.6;
@@ -118,11 +120,13 @@
             display: flex;
             align-items: center;
         }
+
         .hobbies {
             font-size: 45px;
             line-height: 1.6;
             margin-bottom: 10px;
         }
+
         .buttons {
             font-family: 'Poppins', sans-serif;
             display: flex;
@@ -135,12 +139,12 @@
         .button {
             background-color: #003366; 
             color: #ffffff;
-            padding: 15px 30px; /* Increased padding for larger buttons */
+            padding: 20px 40px; /* Increased padding for larger buttons */
             border: none;
             border-radius: 15px;
             text-decoration: none;
             font-family: 'Montserrat', sans-serif;
-            font-size: 18px; /* Increased font size */
+            font-size: 22px; /* Increased font size */
             display: inline-block;
             transition: background-color 0.3s, transform 0.3s;
         }
@@ -148,6 +152,25 @@
         .button:hover {
             background-color: #002d72;
             transform: scale(1.1); /* Slightly increase button size on hover */
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--bg-color);
+            color: var(--text-color);
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -206,32 +229,9 @@
             </div>
         </div>
     </section>
-
+    
     <div class="footer">
         <p><a href="mailto:varulucky1004@gmail.com">varulucky1004@gmail.com</a> | <a href="https://github.com/varshasric4">GitHub</a></p>
     </div>
-
-    <script>
-        // Function to add the visible class when sections are in view
-        function reveal() {
-            var reveals = document.querySelectorAll('.projects, .hobbies, .description');
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add('visible');
-                }
-            }
-        }
-
-        // Event listener for scroll event
-        window.addEventListener('scroll', reveal);
-
-        // Call reveal function on page load
-        document.addEventListener('DOMContentLoaded', reveal);
-    </script>
 </body>
 </html>
-
